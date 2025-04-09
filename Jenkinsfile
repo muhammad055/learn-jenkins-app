@@ -53,7 +53,7 @@ npm test
             }
             steps{
                 sh'''
-                 npm ci netlify-cli 
+                 npm i netlify-cli -g
 
                 node_modules/.bin/netlify --version
                 echo "Deploying to production site : $NETLIFY_SITE_ID"
