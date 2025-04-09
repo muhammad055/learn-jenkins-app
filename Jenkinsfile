@@ -53,7 +53,9 @@ npm test
             }
             steps{
                 sh'''
-                 sudo npm i netlify-cli -g
+                npm config set prefix ~/npm
+                npm i netlify-cli -g
+                export PATH=$PATH:~/npm/bin
 
                 node_modules/.bin/netlify --version
                 echo "Deploying to production site : $NETLIFY_SITE_ID"
