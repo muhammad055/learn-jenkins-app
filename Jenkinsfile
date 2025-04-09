@@ -54,7 +54,7 @@ npm test
             steps{
                 sh'''
                 npm config set prefix ~/npm
-                npm i netlify-cli -g
+                npm install netlify-cli --save-dev
                 export PATH=$PATH:~/npm/bin
 
                 node_modules/.bin/netlify --version
