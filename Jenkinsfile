@@ -52,7 +52,8 @@ npm test
             }
             steps{
                 sh'''
-                npm i netlify_cli
+                npm install netlify-cli -g
+
                 node_modules/.bin/netlify --version
                 echo "Deploying to production site : $NETLIFY_SITE_ID"
                 '''
